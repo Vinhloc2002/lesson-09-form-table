@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position:absolute;left:0; top:0;" height="100" width="80" onload="docReady()" onclick="showMessage()"/>
+    <script>
+        function upArrowPressed() {
+    let element = document.getElementById("nobita");
+    element.style.top = parseInt(element.style.top) - 5 + 'px';
+}
+function downArrowPressed() {
+    var element = document.getElementById("nobita");
+    element.style.top = parseInt(element.style.top) + 5 + 'px';
+}
+function leftArrowPressed() {
+    var element = document.getElementById("nobita");
+    element.style.left = parseInt(element.style.left) - 5 + 'px';
+}
+function rightArrowPressed() {
+    var element = document.getElementById("nobita");
+    element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+}
+</script>
+<script>
+function moveSelection(evt) {
+    switch (evt.keyCode) {
+        case 37:
+            leftArrowPressed();
+            break;
+        case 39:
+            rightArrowPressed();
+            break;
+        case 38:
+            upArrowPressed();
+            break;
+        case 40:
+            downArrowPressed();
+            break;      
+    }
+}
+function docReady() {
+    window.addEventListener('keydown', moveSelection);
+}
+
+function showMessage(){
+    alert(' hậu ăn cức');
+}
+    </script>          
+   
+
+        <img id="chaien" src="https://thiepmung.com/images/frame/frame_icon/che-anh-chaien-1570f69adbad2d.jpg" style="position:absolute;left:10%; top:0;" height="100" width="80" onload="docReadyChaien()" onclick="showMessage()"/>
+    <script>
+        function upArrowPressedChaien() {
+    let element = document.getElementById("chaien");
+    element.style.top = parseInt(element.style.top) - 5 + 'px';
+}
+function downArrowPressedChaien() {
+    var element = document.getElementById("chaien");
+    element.style.top = parseInt(element.style.top) + 5 + 'px';
+}
+function leftArrowPressedChaien() {
+    var element = document.getElementById("chaien");
+    element.style.left = parseInt(element.style.left) - 5 + 'px';
+}
+function rightArrowPressedChaien() {
+    var element = document.getElementById("chaien");
+    element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+}
+function moveSelectionChaien(evt) {
+    switch (evt.keyCode) {
+        case 87:
+            upArrowPressedChaien();  
+            break;
+        case 83:
+            downArrowPressedChaien();
+            break;
+        case 65:
+            leftArrowPressedChaien();
+            break;
+        case 68:
+            rightArrowPressedChaien();
+            break;          
+    }
+}
+function docReadyChaien() {
+    window.addEventListener('keydown', moveSelectionChaien);
+}
+
+function showMessage(){
+    alert(' hậu ăn cức');
+}
+</script>
+</html>

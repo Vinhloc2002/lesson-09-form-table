@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>  
+<body>
+    <p id="result"></p>
+    <script>
+        let bmi= prompt("nhap vao");
+        if(bmi <= 18){
+            document.getElementById("result").innerHTML = "60";
+        }else if(bmi <= 25 && bmi > 18){
+            document.getElementById("result").innerHTML = "70";
+        }else{
+            document.getElementById("result").innerHTML = "50";
+        }
+      </script>
+
+</body>
+
+</html>
